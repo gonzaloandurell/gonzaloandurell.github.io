@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Champ NPC AI System | Gonzalo Andurell</title>
+    <meta name="description" content="Champ NPC AI System Portfolio Case Study by Gonzalo Andurell.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">GA<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ai-systems.html" class="active">AI & Programming</a></li>
+                <li><a href="tech-art.html">Tech Art</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="my-games.html">My Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content project-detail-page">
+        <!-- Back Button -->
+        <div class="breadcrumb">
+            <a href="ai-systems.html" class="back-link">← Back to AI & Programming</a>
+        </div>
+
+        <section class="project-hero">
+            <h1 class="hero-title" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;">Champ - NPC Decision Tree AI</h1>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag">Unity C#</span>
+                <span class="tag">Decision Trees</span>
+                <span class="tag">Combat AI</span>
+                <span class="tag">Mobile Play</span>
+            </div>
+            
+            <div class="hero-video-container">
+                <video src="assets/videos/NPCMovilFight.mp4" controls autoplay muted loop class="hero-video"></video>
+            </div>
+        </section>
+
+        <section class="project-body">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>This showcase demonstrates the combat AI developed for the mobile game prototype "Champ". The core of the system is built upon a modular Decision Tree that drives automated, dynamic combat behavior for non-playable characters (NPCs) engaging both against each other and against the player.</p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Core Features & Behavior:</h3>
+                <ul class="challenge-list">
+                    <li><strong>Autonomous Agent Decisions:</strong> The NPCs can autonomously evaluate the battle state to make split-second combat choices, such as attacking when opening arises, pulling up their blocks to defend against incoming damage, and switching engagement ranges.</li>
+                    <li><strong>Dynamic Weapon Switching:</strong> Characters switch seamlessly between melee (short-range) and ranged capabilities, allowing them to reposition depending on the distance and type of enemy aggro.</li>
+                    <li><strong>Seamless Player Integration:</strong> The AI system seamlessly handles the transition from NPC-vs-NPC combat to reacting directly to the player's inputs and actions, keeping engagements engaging and challenging in real-time.</li>
+                </ul>
+            </div>
+
+            <div class="project-gallery mt-4">
+                <h3 style="margin-bottom: 1.5rem;">Player vs NPC Interaction</h3>
+                <div class="hero-video-container" style="margin-bottom: 2rem;">
+                    <video src="assets/videos/NPCMovilFightPlayer.mp4" controls autoplay muted loop class="hero-video" style="max-height: 500px; width: auto; max-width: 100%; border-radius: 8px;"></video>
+                </div>
+                <p class="caption">The player engaging with the automated NPC AI in the Unity Editor. Notice how the enemies react, block, and trade blows.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

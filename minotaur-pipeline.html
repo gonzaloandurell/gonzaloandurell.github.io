@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minotaur 3D Pipeline | Gonzalo Andurell</title>
+    <meta name="description" content="Minotaur 3D Pipeline Portfolio Case Study by Gonzalo Andurell.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">GA<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ai-systems.html">AI & Programming</a></li>
+                <li><a href="tech-art.html" class="active">Tech Art</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="my-games.html">My Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content project-detail-page">
+        <!-- Back Button -->
+        <div class="breadcrumb">
+            <a href="tech-art.html" class="back-link">← Back to Tech Art</a>
+        </div>
+
+        <section class="project-hero">
+            <h1 class="hero-title" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;">Minotaur Character Pipeline</h1>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag">Blender</span>
+                <span class="tag">Substance Painter</span>
+                <span class="tag">Retopology</span>
+                <span class="tag">Rigging</span>
+                <span class="tag">Animation</span>
+            </div>
+            
+            <div class="hero-video-container">
+                <video src="assets/videos/Minotaur Prosses.mp4" controls autoplay muted loop class="hero-video"></video>
+            </div>
+        </section>
+
+        <section class="project-body">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>This project showcases a complete 3D character pipeline from initial concept sculpting to final in-engine animation. The goal was to create a game-ready, fully rigged bipedal creature optimized for real-time rendering without sacrificing visual fidelity.</p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Technical Challenges & Solutions:</h3>
+                <ul class="challenge-list">
+                    <li><strong>Optimized Retopology:</strong> Carefully designed edge-loops around joints (knees, elbows, shoulders) to ensure smooth deformation during complex attack animations.</li>
+                    <li><strong>UV Mapping & Texturing:</strong> Packed UVs efficiently to maximize texel density. Used Substance Painter to bake high-poly details onto the low-poly mesh, creating stylized PBR textures.</li>
+                    <li><strong>Rigging & Weight Painting:</strong> Built a custom rig in Blender with IK/FK switches. Refined weight painting manually to prevent volume loss during extreme poses.</li>
+                </ul>
+            </div>
+
+            <div class="project-gallery mt-4">
+                <h3 style="margin-bottom: 1.5rem;">Process Gallery (Add your images here)</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="media-placeholder" style="aspect-ratio: 1/1; position: relative; border-radius: 8px;"><span>High Poly Sculpt</span></div>
+                        <p class="caption">ZBrush/Blender Sculpting phase</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="media-placeholder" style="aspect-ratio: 1/1; position: relative; border-radius: 8px;"><span>Wireframe / Retopo</span></div>
+                        <p class="caption">Game-ready topology</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="media-placeholder" style="aspect-ratio: 1/1; position: relative; border-radius: 8px;"><span>UV & Textures</span></div>
+                        <p class="caption">Substance Painter Maps</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="media-placeholder" style="aspect-ratio: 1/1; position: relative; border-radius: 8px;"><span>Rig & Weights</span></div>
+                        <p class="caption">Rigging setup in Blender</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

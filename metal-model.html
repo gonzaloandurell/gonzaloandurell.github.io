@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Environment & Custom Shaders | Gonzalo Andurell</title>
+    <meta name="description" content="3D Environment and Shaders Portfolio Case Study by Gonzalo Andurell.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">GA<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ai-systems.html">AI & Programming</a></li>
+                <li><a href="tech-art.html" class="active">Tech Art</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="my-games.html">My Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content project-detail-page">
+        <div class="breadcrumb">
+            <a href="tech-art.html" class="back-link">← Back to Tech Art</a>
+        </div>
+
+        <section class="project-hero">
+            <h1 class="hero-title" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;">Sci-Fi Metal Environment & Shaders</h1>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag">Maya</span>
+                <span class="tag">Substance Painter</span>
+                <span class="tag">Unity (Built-In RP)</span>
+                <span class="tag">Amplify Shader Editor</span>
+                <span class="tag">VFX</span>
+            </div>
+            
+            <div class="hero-video-container">
+                <video src="assets/videos/Metal Model To Shader.mp4" controls autoplay muted loop class="hero-video"></video>
+            </div>
+        </section>
+
+        <section class="project-body">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>This project features a large-scale 3D Sci-Fi environment created from scratch during my coursework. It includes complex geometry such as an intricate vehicle, industrial walls, tables, and heavy machinery. Beyond 3D modeling and texturing, this scene serves as a showcase for custom shaders and particle systems developed in Unity.</p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Technical Challenges & Solutions:</h3>
+                <ul class="challenge-list">
+                    <li><strong>Environment Modeling:</strong> Modeled the entire scene in Maya, ensuring clean topology for both the large architectural pieces and the detailed mechanical props (vehicle, machinery).</li>
+                    <li><strong>PBR Texturing:</strong> Textured assets in Substance Painter, focusing on worn metals, industrial paint, and emissive materials to bring the sci-fi set to life.</li>
+                    <li><strong>Custom Shaders (Amplify):</strong> Developed interactive node-based shaders using Amplify Shader Editor for the Unity Built-in Render Pipeline, optimizing performance while retaining high visual fidelity.</li>
+                    <li><strong>Particle Systems (VFX):</strong> Integrated dynamic particle effects that react with the environment and custom shaders, adding depth and motion to the static scene.</li>
+                </ul>
+            </div>
+
+            <div class="project-gallery mt-4">
+                <h3 style="margin-bottom: 1.5rem;">Process Gallery</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" style="padding: 0;">
+                        <img src="assets/images/Metal Model 1.png" alt="Metal Model Environment 1" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 12px 12px 0 0; display: block;">
+                        <p class="caption" style="padding: 0.8rem; margin: 0;">Environment Prop Detailing</p>
+                    </div>
+                    <div class="gallery-item" style="padding: 0;">
+                        <img src="assets/images/Metal Model 2.png" alt="Metal Model Environment 2" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 12px 12px 0 0; display: block;">
+                        <p class="caption" style="padding: 0.8rem; margin: 0;">Material & Texture Breakdown</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

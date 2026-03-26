@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gonzalo Andurell | Game Developer</title>
-    <meta name="description" content="Portfolio profesional de Gonzalo Andurell, desarrollador de videojuegos especializado en Unity y C#.">
+    <meta name="description" content="Professional portfolio of Gonzalo Andurell, Game Developer and Technical Artist.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,42 +18,77 @@
 
     <header>
         <nav>
-            <div class="logo">GA<span>.</span></div>
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">GA<span>.</span></a></div>
             <ul class="nav-links">
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="ai-systems.html">AI & Programming</a></li>
+                <li><a href="tech-art.html">Tech Art</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="my-games.html">My Games</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <section class="hero">
             <div class="hero-content">
                 <span class="badge">Game Developer</span>
-                <h1 class="hero-title">Hola, soy <br> <span class="highlight">Gonzalo Andurell</span></h1>
-                <p class="hero-subtitle">Transformando ideas en experiencias interactivas insanas. Especializado en mecánicas de juego, sistemas de UI y Unity C#.</p>
+                <h1 class="hero-title">Hello, I'm <br> <span class="highlight">Gonzalo Andurell</span></h1>
+                <p class="hero-subtitle">Transforming ideas into wild interactive experiences. Specialized in game mechanics, AI systems, and Unity C#.</p>
                 <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">Ver mis Proyectos</a>
-                    <a href="#contact" class="btn btn-secondary">Contactar</a>
+                    <a href="#hub" class="btn btn-primary">Explore Portfolio</a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="btn btn-secondary">LinkedIn Profile</a>
                 </div>
             </div>
         </section>
 
-        <!-- Aquí se pueden agregar más secciones en el futuro (Sobre mí, Proyectos, etc.) -->
+        <section id="hub" class="hub-section">
+            <div class="hub-container">
+                <div class="hub-grid">
+                    <!-- AI & Programming -->
+                    <a href="ai-systems.html" class="hub-card">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <h3>AI Systems & Programming</h3>
+                            <p>Behavior Trees, FSMs, Architecture, and core gameplay mechanics programming.</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Technical Art -->
+                    <a href="tech-art.html" class="hub-card">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <h3>Technical Art & 3D</h3>
+                            <p>Rendering pipelines, custom Shaders, dynamic VFX, and 3D Art integration.</p>
+                        </div>
+                    </a>
+
+                    <!-- Game Design -->
+                    <a href="game-design.html" class="hub-card">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <h3>Game & Level Design</h3>
+                            <p>Mechanics design balancing, level layout structuring, and player experience (UX).</p>
+                        </div>
+                    </a>
+
+                    <!-- My Games -->
+                    <a href="my-games.html" class="hub-card">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <h3>My Games</h3>
+                            <p>Playable projects, professional work highlights, prototypes, and shipped titles.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <script>
-        // Efecto parallax simple para los orbs de fondo
-        document.addEventListener('mousemove', (e) => {
-            const orbs = document.querySelectorAll('.glow-orb');
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
+    <footer>
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
 
-            orbs[0].style.transform = `translate(${x * 50}px, ${y * 50}px)`;
-            orbs[1].style.transform = `translate(${x * -40}px, ${y * -40}px)`;
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
