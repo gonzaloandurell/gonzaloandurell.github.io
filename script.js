@@ -33,4 +33,49 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // --- SISTEMA DE TRANSICIONES ENTRE PÁGINAS ---
+    const links = document.querySelectorAll('a[href]');
+
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const url = this.getAttribute('href');
+            
+            // Ignorar enlaces externos, anclas o tabs nuevas
+            if (!url || url.startsWith('#') || this.target === '_blank' || url.startsWith('http') || url.startsWith('mailto:')) {
+                return;
+            }
+
+            e.preventDefault(); // Detener el salto instantáneo
+            document.body.classList.add('fade-out'); // Activar transición CSS
+
+            // Si es un botón de volver atrás, intentar recuperar historial para mantener el scroll
+            if (this.classList.contains('back-link')) {
+                setTimeout(() => {
+                    history.back();
+                }, 200);
+                return;
+            }
+
+            // Esperar los 200ms definidos en CSS para cargar la url
+            setTimeout(() => {
+                window.location.href = url;
+            }, 200); 
+        });
+    });
+
+    // --- TARJETAS DE PROYECTO CLICABLES ---
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => {
+        const linkBtn = card.querySelector('a.btn');
+        if (linkBtn && linkBtn.getAttribute('href') !== '#') {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', (e) => {
+                // Prevenir que se active 2 veces si el usuario hace clic exacto en el boton
+                if (e.target.tagName !== 'A' && !e.target.closest('a')) {
+                    linkBtn.click(); // Dispara el PJAX de la transicion o el salto nativo
+                }
+            });
+        }
+    });
 });

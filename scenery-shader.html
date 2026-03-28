@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenery Shader Case Study | Gonzalo Andurell</title>
+    <meta name="description" content="Technical Breakdown of the Scenery Shader utilizing Parallax Occlusion Mapping and Multi-Texture Blending by Gonzalo Andurell.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet"">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">GA<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ai-systems.html">AI & Programming</a></li>
+                <li><a href="tech-art.html" class="active">Tech Art</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="my-games.html">My Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content project-detail-page">
+        <div class="breadcrumb">
+            <a href="tech-art.html" class="back-link">← Back to Tech Art</a>
+        </div>
+
+        <section class="project-hero">
+            <h1 class="hero-title" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;"><span class="c-tech">Scenery</span> Shader</h1>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag">Amplify Shader</span>
+                <span class="tag">Parallax Occlusion</span>
+                <span class="tag">Height Map Blending</span>
+                <span class="tag">Unity (Built-In & HDRP)</span>
+            </div>
+            
+            <div class="hero-video-container" style="border-color: rgba(236, 72, 153, 0.2); box-shadow: 0 10px 40px rgba(236, 72, 153, 0.1);">
+                <video src="assets/videos/Scenary  ShaderShow.mp4" controls autoplay muted loop playsinline class="hero-video"></video>
+            </div>
+        </section>
+
+        <section class="project-body">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>A highly adaptable scenery material shader designed to fake complex geometric depth and seamlessly blend multiple terrain types (Soil, Broken Soil, and Background Rocks). By leveraging <strong>Parallax Occlusion Mapping</strong> alongside dynamic <strong>Height Map Noise Blending</strong>, the shader drastically reduces polygon count while maintaining high-fidelity visuals across both floors and walls.</p>
+                <p>Originally developed in Unity's Built-In Render Pipeline using Amplify Shader Editor, the underlying node architecture has been structured cleanly for easy portability to <strong>HDRP</strong>.</p>
+                
+                <h3 style="margin-top: 3rem; margin-bottom: 1rem; color: var(--text-primary);">Architecture Deep Dive</h3>
+                
+                <!-- Section 1: Parallax -->
+                <div style="margin-top: 2rem; background: rgba(255,255,255,0.02); padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05);">
+                    <h4 style="color: var(--secondary-color); margin-bottom: 1rem; font-size: 1.5rem;">1. Parallax Occlusion Faking</h4>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">To avoid the performance cost of actual geometric displacement, the shader utilizes Parallax Occlusion. This modifies the texture coordinates based on the camera's view angle and a height map, giving the illusion of immense depth inside cracks and rocks.</p>
+                    <img src="assets/images/Scenary  Shader Node PAralax.png" alt="Parallax Shader Node" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                </div>
+
+                <!-- Section 2: Noise Blending -->
+                <div style="margin-top: 2rem; background: rgba(255,255,255,0.02); padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05);">
+                    <h4 style="color: var(--secondary-color); margin-bottom: 1rem; font-size: 1.5rem;">2. Height Map Noise Blending</h4>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">The material dynamically transitions between different surface types (Soil vs Broken Soil) using a parameterized noise mask. I control the threshold and smoothness via exposed material properties, allowing for real-time adjustments and variations without needing extra textures natively in the engine.</p>
+                    <img src="assets/images/Scenary  Shader Node Noise.png" alt="Noise Blending Node" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                </div>
+
+                <!-- Section 3: Global Graph -->
+                <div style="margin-top: 2rem; background: rgba(255,255,255,0.02); padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05);">
+                    <h4 style="color: var(--secondary-color); margin-bottom: 1rem; font-size: 1.5rem;">3. Global Architecture & HDRP Portability</h4>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">The complete routing is heavily organized. Clean abstraction of math operations and separated logic domains ensures that translating this pipeline from the Built-In RP to high-end configurations like HDRP is seamless and modular.</p>
+                    <img src="assets/images/Scenary  Shader Node All.png" alt="Complete Shader Architecture Node Graph" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                </div>
+
+                <!-- Section 4: HDRP Render Showcase -->
+                <div style="margin-top: 2rem; background: rgba(255,255,255,0.02); padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05);">
+                    <h4 style="color: var(--secondary-color); margin-bottom: 1rem; font-size: 1.5rem;">4. HDRP Render Showcase</h4>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">This is the final result adapted cleanly to the High Definition Render Pipeline (HDRP). Despite being a completely flat 2D plane, the Parallax Occlusion and dynamic Multi-Texture Blending produce an incredibly convincing illusion of depth and physical relief.</p>
+                    <img src="assets/images/Shader HDRP image.png" alt="HDRP Shader Render on a flat plane" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
