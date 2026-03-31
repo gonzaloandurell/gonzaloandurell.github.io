@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squad Tactical AI System | Gonzalo Andurell</title>
+    <meta name="description" content="Squad Tactical AI System featuring Theta* Pathfinding and Boids. Portfolio Case Study by Gonzalo Andurell.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">GA<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ai-systems.html" class="active">AI & Programming</a></li>
+                <li><a href="tech-art.html">Tech Art</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="my-games.html">My Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content project-detail-page">
+        <!-- Back Button -->
+        <div class="breadcrumb">
+            <a href="ai-systems.html" class="back-link">← Back to AI & Programming</a>
+        </div>
+
+        <section class="project-hero">
+            <h1 class="hero-title" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;"><span class="c-ai">Squad</span> Tactical AI</h1>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag">Unity C#</span>
+                <span class="tag">Theta* Pathfinding</span>
+                <span class="tag">Boids</span>
+                <span class="tag">Squad Logic</span>
+            </div>
+            
+            <div class="hero-video-container">
+                <video src="assets/videos/Lead-ObstaclAvoidance-ThetaStar.mp4" controls autoplay muted loop class="hero-video"></video>
+            </div>
+            <p class="caption" style="margin-top: 1rem;">Showcase of the Theta* global pathfinding and local obstacle avoidance with a player-led squad.</p>
+        </section>
+
+        <section class="project-body">
+            <div class="project-description">
+                <h2>Navigation & Movement</h2>
+                <p>This system focuses on high-performance squad navigation in complex environments. It combines global long-range pathfinding with local group steering Behaviors to create a seamless movement experience.</p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Key Technical Features:</h3>
+                <ul class="challenge-list">
+                    <li><strong>Theta* Pathfinding:</strong> Unlike standard A*, which is restricted to grid lines, Theta* allows for "any-angle" paths. This results in much smoother, straight-line navigation that looks more natural for human-like or creature-like agents.</li>
+                    <li><strong>Boids Dynamics:</strong> The followers use a combination of <strong>Separation, Cohesion, and Alignment</strong> rules. This ensures the group feels like a cohesive unit while preventing clipping and un-natural crowding.</li>
+                    <li><strong>Leader-Follower Hybrid:</strong> The group maintains a tactical proximity to the leader (the player), but each individual agent handles its own local obstacle avoidance and path correction in real-time.</li>
+                </ul>
+            </div>
+
+            <div class="project-gallery mt-4" style="margin-top: 4rem;">
+                <h3 style="margin-bottom: 1rem;">Combat & Survival AI</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Beyond movement, the agents possess an internal state machine that governs their behavior during combat encounters. This includes auto-targeting logic and a survival instinct that triggers when health reaches critical levels.</p>
+                
+                <div class="hero-video-container" style="margin-bottom: 2rem; min-height: 300px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.02); border: 2px dashed rgba(255,255,255,0.1);">
+                    <div style="text-align: center; color: var(--text-secondary);">
+                        <svg style="width: 48px; height: 48px; margin-bottom: 1rem; opacity: 0.5;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M9 20v-10M15 20v-2M18 20V4M6 20v-4"/></svg>
+                        <p style="font-weight: 600;">Combat Video Coming Soon</p>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Currently recording the combat and fleeing logic implementation.</p>
+                    </div>
+                </div>
+
+                <div class="project-description">
+                    <h3 style="margin-top: 1rem; margin-bottom: 1rem;">Behavioral Logic:</h3>
+                    <ul class="challenge-list">
+                        <li><strong>Tactical Engagement:</strong> Agents automatically evaluate enemies within a specific range and prioritize targets based on proximity and threat level.</li>
+                        <li><strong>Survival Fleeing:</strong> When an agent's health drops below a configurable threshold, its state changes to "Flee". It will then use Theta* to find the fastest path to a designated "Safe Zone" or return to the protection of the leader.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
