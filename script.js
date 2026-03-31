@@ -12,6 +12,9 @@ document.addEventListener('mousemove', (e) => {
 
 // Sistema de reproducción de videos solo al hacer Hover
 document.addEventListener('DOMContentLoaded', () => {
+    // Asegurar que la pantalla no se quede en negro (limpiar fade-out si existe)
+    document.body.classList.remove('fade-out');
+
     const projectCards = document.querySelectorAll('.project-card');
 
     projectCards.forEach(card => {
@@ -78,4 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+});
+
+// --- ELIMINAR FADE-OUT AL VOLVER ATRÁS (BFCACHE) ---
+// Este evento se dispara incluso cuando la página se carga desde el historial/caché del navegador
+window.addEventListener('pageshow', (event) => {
+    if (event.persisted || document.body.classList.contains('fade-out')) {
+        document.body.classList.remove('fade-out');
+    }
 });
