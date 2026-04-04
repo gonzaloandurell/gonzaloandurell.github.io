@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter Architecture | Gonzalo Andurell</title>
+    <meta name="description" content="Space Shooter Modular Architecture Case Study by Gonzalo Andurell. Highlighting MVC, Strategy, and Observer patterns.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">GA<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ai-systems.html" class="active">AI & Programming</a></li>
+                <li><a href="tech-art.html">Tech Art</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="my-games.html">My Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content project-detail-page">
+        <!-- Back Button -->
+        <div class="breadcrumb">
+            <a href="ai-systems.html" class="back-link">← Back to AI & Programming</a>
+        </div>
+
+        <section class="project-hero">
+            <h1 class="hero-title" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;"><span class="c-ai">Space Shooter</span> - Modular Architecture</h1>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag">Unity C#</span>
+                <span class="tag">MVC Pattern</span>
+                <span class="tag">Design Patterns</span>
+                <span class="tag">Clean Code</span>
+            </div>
+            
+            <div class="hero-video-container" style="max-width: 600px;">
+                <video src="assets/videos/ShipGame.mp4" controls autoplay muted loop class="hero-video"></video>
+            </div>
+        </section>
+
+        <section class="project-body">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>This prototype is a 2D top-down shooter built in Unity, designed to demonstrate scalable game architecture and solid software engineering principles. Unlike traditional prototypes that rely on tightly coupled scripts, this project utilizes modern design patterns to ensure maintainability and performance.</p>
+                
+                <div class="architecture-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <!-- MVC -->
+                    <div class="arch-item">
+                        <h3 class="c-ai">MVC Architecture</h3>
+                        <p>The Player logic is cleanly separated into three layers to avoid the "God object" anti-pattern:</p>
+                        <ul>
+                            <li><strong>Model:</strong> Manages state (health, position) and core logic, broadcasting changes via C# delegates.</li>
+                            <li><strong>View:</strong> Handles graphics and animations by listening to Model events.</li>
+                            <li><strong>Controller:</strong> Processes PC/Mobile input and issues commands to the Model.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Strategy -->
+                    <div class="arch-item">
+                        <h3 class="c-ai">Strategy Pattern</h3>
+                        <p>Enemy and entity movement is governed by a dynamic strategy system. Instead of hardcoding behavior, agents use interchangeable strategies:</p>
+                        <ul>
+                            <li><strong>Linear/Path/Target:</strong> Different movement logic derived from a base class.</li>
+                            <li><strong>Steering:</strong> Includes Reynolds-style steering for organic motion.</li>
+                            <li>Runtime swapping of AI behaviors.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Observer -->
+                    <div class="arch-item">
+                        <h3 class="c-ai">Observer Pattern</h3>
+                        <p>A central <strong>Event Bus</strong> (EventsManager) decouples global game systems. Systems broadcast events like <code>GAME_OVER</code> or <code>WIN_GAME</code>, allowing listeners (like UI or Audio) to react without direct dependencies.</p>
+                    </div>
+
+                    <!-- Optimization -->
+                    <div class="arch-item">
+                        <h3 class="c-ai">Optimization & UI</h3>
+                        <p>High-performance systems to ensure a smooth experience:</p>
+                        <ul>
+                            <li><strong>Object Pooling:</strong> Recycles bullets and enemies to prevent Garbage Collection spikes.</li>
+                            <li><strong>UI State Machine:</strong> A stack-based system (Push/Pop) for layered menus, managed securely by the GameManager.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-box" style="margin-top: 4rem; padding: 2rem; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                    <h3>Explore the Source Code</h3>
+                    <p>Interested in the implementation details? Check out the full repository on GitHub.</p>
+                    <a href="https://github.com/gonzaloandurell/unity-ship-prototype" target="_blank" class="btn btn-primary" style="margin-top: 1rem;">View GitHub Repository</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

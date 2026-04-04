@@ -462,7 +462,7 @@ nav {
 .project-media {
     width: 100%;
     aspect-ratio: 16/9;
-    background: #151520;
+    background: #000;
     position: relative;
 }
 
@@ -480,7 +480,7 @@ nav {
 .project-video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     pointer-events: none;
 }
 
