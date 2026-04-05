@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behavior Tree AI System | Gonzalo Andurell</title>
+    <meta name="description" content="Modular Behavior Tree AI System Portfolio Case Study by Gonzalo Andurell.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">GA<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ai-systems.html" class="active">AI & Programming</a></li>
+                <li><a href="tech-art.html">Tech Art</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="my-games.html">My Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content project-detail-page">
+        <!-- Back Button -->
+        <div class="breadcrumb">
+            <a href="ai-systems.html" class="back-link">← Back to AI & Programming</a>
+        </div>
+
+        <section class="project-hero">
+            <h1 class="hero-title" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;"><span class="c-ai">AI</span> - Behavior Design Prototype</h1>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag">Unity Prototype</span>
+                <span class="tag">Behavior Trees (Panda)</span>
+                <span class="tag">Steering Behaviors</span>
+                <span class="tag">Sensory Integration</span>
+            </div>
+            
+            <div class="hero-video-container">
+                <video src="assets/videos/BheviourTreeExample.mp4" controls autoplay muted loop class="hero-video"></video>
+            </div>
+        </section>
+
+        <section class="project-body">
+            <div class="project-description">
+                <h2>Project Overview (Prototyping Phase)</h2>
+                <p>This showcase focuses on the **Behavioral Design** and **Decision Logic** of the Minotaur agent during a prototyping phase. For this specific iteration, the **Panda AI Engine** was utilized to rapidly map out complex sensory-response loops before migrating the logic into a more specialized internal architecture.</p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Key Features & Logic:</h3>
+                <ul class="challenge-list">
+                    <li><strong>Reactive Sound Detection:</strong> The agent continuously monitors for environmental sound events. When a sound is detected, it triggers an investigation state, guiding the agent to the sound origin.</li>
+                    <li><strong>Patrol-to-Alert Lifecycle:</strong> A hierarchical tree that manages transitions between low-alert patrolling and high-alert direct player engagement.</li>
+                    <li><strong>Steering & Navigation:</strong> Integration of sensory data with navigation systems to ensure movement feels deliberate and weighted for a large creature.</li>
+                </ul>
+            </div>
+
+            <div class="project-gallery mt-4">
+                <h3 style="margin-bottom: 1.5rem;">Architecture Evolution</h3>
+                <div class="info-card" style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                    <p><strong>Note for Technical Reviewers:</strong> While this prototype leveraged the Panda middleware for rapid behavioral mapping, **current versions of the game have evolved to use a fully custom Utility AI (Utility Behavior) system.** This migration allowed for more granular weighting of actions based on a wider range of world variables, moving away from the rigid structure of the initial prototype.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

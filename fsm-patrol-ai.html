@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSM Patrol & Stealth AI | Gonzalo Andurell</title>
+    <meta name="description" content="Finite State Machine Patrol and Stealth AI System Portfolio Case Study by Gonzalo Andurell.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">GA<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ai-systems.html" class="active">AI & Programming</a></li>
+                <li><a href="tech-art.html">Tech Art</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="my-games.html">My Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content project-detail-page">
+        <!-- Back Button -->
+        <div class="breadcrumb">
+            <a href="ai-systems.html" class="back-link">← Back to AI & Programming</a>
+        </div>
+
+        <section class="project-hero">
+            <h1 class="hero-title" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;"><span class="c-ai">FSM</span> - Patrol & Stealth AI</h1>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag">Unity C#</span>
+                <span class="tag">Finite State Machines</span>
+                <span class="tag">Pathfinding</span>
+                <span class="tag">Stealth Mechanics</span>
+            </div>
+            
+            <div class="hero-video-container">
+                <video src="assets/videos/PatrollAgentsExamplleFMS.mp4" controls autoplay muted loop class="hero-video"></video>
+            </div>
+        </section>
+
+        <section class="project-body">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>This prototype demonstrates a robust Finite State Machine (FSM) implementation for AI agents in a stealth-oriented environment. Using primitive primitives as placeholders, the focus is entirely on the logic governing agent transitions between patrolling, chasing, and searching states.</p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Core AI Logic & Features:</h3>
+                <ul class="challenge-list">
+                    <li><strong>Patrol State:</strong> Agents move between a series of fixed waypoint markers in a continuous loop.</li>
+                    <li><strong>Dynamic Detection (Field of View):</strong> Agents use a vision cone to detect the player (represented by a green cube). Detection is instantaneous once the player enters the FOV.</li>
+                    <li><strong>Shared Alert System:</strong> A "hive mind" notification system ensures that if any single agent detects the player, all agents in the scene enter the Alert/Chase state simultaneously.</li>
+                    <li><strong>Chase & Search Pathfinding:</strong> Upon detection, agents abandon their patrol routes to pursue the player. If the player breaks line of sight, agents use pathfinding to reach the last position where the player was seen.</li>
+                    <li><strong>Reset Loop:</strong> If agents reach the last known position and fail to re-establish visual contact after a search period, they autonomously return to their original patrol duties.</li>
+                </ul>
+            </div>
+
+            <div class="project-gallery mt-4">
+                <h3 style="margin-bottom: 1.5rem;">FSM State Transition Detail</h3>
+                <div class="info-card" style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                    <p>The system is designed to be easily extensible, allowing for the addition of new states (like "Investigate Disturbance" or "Flee") without breaking the core transition logic. The pathfinding integration ensures that agents navigate complex environments to find the player even after losing direct visibility.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
