@@ -81,6 +81,57 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // --- NAVEGACIÓN MÓVIL ---
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (nav && navLinks) {
+        // Inyectar botón de hamburguesa
+        const toggle = document.createElement('button');
+        toggle.className = 'mobile-nav-toggle';
+        toggle.setAttribute('aria-label', 'Menu');
+        toggle.innerHTML = `
+            <div class="hamburger-box">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+        `;
+        
+        nav.appendChild(toggle);
+        
+        toggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            toggle.classList.toggle('active');
+            
+            // Prevenir scroll
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Cerrar al hacer clic en un link (para las transiciones)
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                toggle.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Cerrar al hacer clic fuera del menú
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                toggle.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
 });
 
 // --- ELIMINAR FADE-OUT AL VOLVER ATRÁS (BFCACHE) ---

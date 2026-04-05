@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Design - Champ | Gonzalo Andurell</title>
+    <meta name="description" content="Level Design showcase for the game Champ. Featuring solo combat, troop management, and tactical design. Portfolio project by Gonzalo Andurell.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">GA<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ai-systems.html">AI & Programming</a></li>
+                <li><a href="tech-art.html">Tech Art</a></li>
+                <li><a href="game-design.html" class="active">Game Design</a></li>
+                <li><a href="my-games.html">My Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content project-detail-page">
+        <!-- Back Button -->
+        <div class="breadcrumb">
+            <a href="game-design.html" class="back-link">← Back to Game Design</a>
+        </div>
+
+        <section class="project-hero">
+            <h1 class="hero-title" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;"><span class="c-design">Level Design</span> - Champ</h1>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag">Blocking</span>
+                <span class="tag">Troop Management</span>
+                <span class="tag">Tactical Combat</span>
+                <span class="tag">GDD</span>
+            </div>
+        </section>
+
+        <section class="project-body">
+            <div class="project-description">
+                <h2>Design Overview</h2>
+                <p>This project was developed for a Level Design course, focusing on the game <strong>Champ</strong>. The goal was to create a progression of distinct gameplay sequences through a carefully structured level layout. The level integrates <strong>solo combat phases</strong>, <strong>troop management</strong>, and <strong>tactical combat</strong>, culminating in a final <strong>boss encounter</strong>. The early blocking phase ensures each area supports its specific mechanical focus while maintaining clear player guidance.</p>
+            </div>
+
+            <div class="project-gallery mt-4">
+                <div class="gallery-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 4rem;">
+                    <div class="gallery-item" style="padding: 0; background: none; border: none;">
+                        <img src="assets/images/parcial-1-blocking-puente.png" alt="Champ Level Blocking - Bridge" style="width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                    </div>
+                    <div class="gallery-item" style="padding: 0; background: none; border: none;">
+                        <img src="assets/images/parcial-1-blocking-castillo.png" alt="Champ Level Blocking - Castle Detail" style="width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 4rem 0;">
+
+            <div class="project-description" style="text-align: center;">
+                <h2 style="margin-bottom: 1.5rem;">Level Design Document - Champ</h2>
+                <p style="max-width: 800px; margin: 0 auto 2.5rem auto;">The complete documentation covering enemy placement, pacing, resource distribution, and the mechanical logic behind every architectural choice is available in the full document.</p>
+                
+                <div class="design-doc-cta" style="background: rgba(16, 185, 129, 0.05); padding: 3rem; border-radius: 20px; border: 1px solid rgba(16, 185, 129, 0.2); display: inline-block;">
+                    <div class="icon-wrapper" style="margin: 0 auto 1.5rem auto; box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);">
+                        <svg class="c-design" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;">Level Design - Champ</h3>
+                    <p style="margin-bottom: 2rem; opacity: 0.8;">Level Design Document</p>
+                    <a href="assets/docs/champ-level-design.pdf" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 10px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        View Full Document (PDF)
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 5rem;">
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

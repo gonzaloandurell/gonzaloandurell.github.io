@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VFX Graph - Dynamic Particles | Gonzalo Andurell</title>
+    <meta name="description" content="Technical showcase of Unity VFX Graph systems for fire and lightning effects. Includes C# scripting for dynamic parameter coordination. Portfolio Case Study by Gonzalo Andurell.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">GA<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ai-systems.html">AI & Programming</a></li>
+                <li><a href="tech-art.html" class="active">Tech Art</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="my-games.html">My Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content project-detail-page">
+        <!-- Back Button -->
+        <div class="breadcrumb">
+            <a href="tech-art.html" class="back-link">← Back to Tech Art</a>
+        </div>
+
+        <section class="project-hero">
+            <h1 class="hero-title" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;"><span class="c-tech">VFX Graph</span> & Particles</h1>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag">VFX Graph</span>
+                <span class="tag">C# Parameter Sync</span>
+                <span class="tag">LOD Optimization</span>
+                <span class="tag">HDRP</span>
+            </div>
+            
+            <div class="hero-video-container">
+                <video src="assets/videos/LighningParticle.mp4" controls autoplay muted loop class="hero-video"></video>
+            </div>
+            <p class="caption" style="margin-top: 1rem;">Main Showcase: Mesh-based lightning effect with integrated electrical particle spawning.</p>
+        </section>
+
+        <section class="project-body">
+            
+            <!-- Section 1: Lightning System -->
+            <div class="project-description" style="margin-bottom: 5rem;">
+                <h2>Lightning Particle Interaction</h2>
+                <p>A specialized VFX Graph system designed to interact with world geometry without the use of physics-based collisions. Instead, the lightning bolt spawns its electrical sparks and emission bursts directly on a <strong>custom animated mesh</strong>. This allows for precise control of the visual timing and impact point synchronization within the VFX Graph itself.</p>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin: 4rem 0;">
+
+            <!-- Section 2: Fire System -->
+            <div class="project-description">
+                <h2>4-Layer Dynamic Fire System</h2>
+                <p>This system uses Unity's <strong>VFX Graph</strong> to coordinate a complex 4-layered particle effect. The entire setup is managed by an optimization logic that allows for a "Low" quality mode (LOD), disabling non-essential layers like smoke and sparks for distant objects to maintain high performance in-game.</p>
+                
+                <div class="hero-video-container" style="margin-top: 2rem;">
+                    <video src="assets/videos/FireParticle.mp4" controls autoplay muted loop class="hero-video" style="max-height: 500px; object-fit: cover;"></video>
+                </div>
+                <p class="caption" style="margin-top: 1rem;">Technical Demo: 4 Particle Layers (Fire/Emission, Smoke, Sparks, and Heat Distortion) synchronized with a scene Point Light.</p>
+
+                <!-- Technical Breakdown - Full Width Stacking -->
+                <div class="tech-stack-vertical" style="display: flex; flex-direction: column; gap: 3rem; margin: 4rem 0;">
+                    
+                    <div class="tech-card" style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--accent-color);">VFX Graph Logic & LODs</h3>
+                        <div style="width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); background: #000;">
+                            <img src="assets/images/Fire Particle VFX.png" alt="VFX Graph Node Structure" style="width: 100%; height: auto; display: block;">
+                        </div>
+                        <p style="margin-top: 1.5rem; font-size: 1.1rem; opacity: 0.9;">The graph handle the internal logic for particle density, color emission, and technical LOD scaling to prevent performance drops.</p>
+                    </div>
+
+                    <div class="tech-card" style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--accent-color);">C# Coordination Script</h3>
+                        <div style="width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); background: #000;">
+                            <img src="assets/images/Fire Particle Script.png" alt="C# Script for Parameter Sync" style="width: 100%; height: auto; display: block;">
+                        </div>
+                        <p style="margin-top: 1.5rem; font-size: 1.1rem; opacity: 0.9;">A dedicated coordinator script passing real-time parameters to both the VFX Graph and the scene's Point Light to maintain visual coherence during fire scaling.</p>
+                    </div>
+                </div>
+
+                <div class="features-list" style="background: rgba(99, 102, 241, 0.05); padding: 2rem; border-radius: 12px; border: 1px solid rgba(99, 102, 241, 0.2);">
+                    <h4 style="margin-bottom: 1rem;">System Features:</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: start; gap: 0.8rem;">
+                            <span style="color: var(--accent-color);">✔</span>
+                            <span><strong>4 Internal Layers:</strong> Fire/Emission, Smoke, Sparks, and Heat Distortion (Refraction).</span>
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: start; gap: 0.8rem;">
+                            <span style="color: var(--accent-color);">✔</span>
+                            <span><strong>Optimization (LOD):</strong> Custom "Low" mode to disable smoke/sparks, prioritizing performance.</span>
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: start; gap: 0.8rem;">
+                            <span style="color: var(--accent-color);">✔</span>
+                            <span><strong>Light Prefab Sync:</strong> Point light intensity linked to fire scale via parameter passing.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 5rem;">
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
