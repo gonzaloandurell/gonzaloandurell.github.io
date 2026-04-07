@@ -10,32 +10,16 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
-// Sistema de reproducción de videos solo al hacer Hover
+// Gestión de interactividad global
 document.addEventListener('DOMContentLoaded', () => {
     // Asegurar que la pantalla no se quede en negro (limpiar fade-out si existe)
     document.body.classList.remove('fade-out');
 
     const projectCards = document.querySelectorAll('.project-card');
 
-    projectCards.forEach(card => {
-        const video = card.querySelector('video');
-        
-        if (video) {
-            // Asegurarnos de que el video esté pausado inicialmente
-            video.pause();
-
-            card.addEventListener('mouseenter', () => {
-                video.play().catch(err => {
-                    console.warn("La reproducción del video fue bloqueada por el navegador:", err);
-                });
-            });
-
-            card.addEventListener('mouseleave', () => {
-                video.pause();
-                // Opcional: video.currentTime = 0; // Descomentar si quieres que el video empiece de 0 siempre
-            });
-        }
-    });
+    // Los videos ahora se reproducen automáticamente y de forma perpetua 
+    // gracias a los atributos HTML (autoplay muted loop playsinline).
+    // Se ha eliminado la lógica de pausa inicial y de Hover para mejorar el dinamismo visual.
 
     // --- SISTEMA DE TRANSICIONES ENTRE PÁGINAS ---
     const links = document.querySelectorAll('a[href]');
