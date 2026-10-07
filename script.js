@@ -125,3 +125,79 @@ window.addEventListener('pageshow', (event) => {
         document.body.classList.remove('fade-out');
     }
 });
+
+// --- SISTEMA DE PARTÍCULAS FÍSICAS (TECH ART) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.particles');
+    if (!container) return;
+    
+    // Limpiar pseudo-elementos (por si quedaron de la versión CSS)
+    container.style.cssText = 'background: transparent;';
+    
+    const numParticles = 75; // Mas cantidad
+    const particles = [];
+    
+    for (let i = 0; i < numParticles; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle-node';
+        
+        // Random properties
+        const size = Math.random() * 4 + 1; // 1px to 5px
+        p.style.width = `${size}px`;
+        p.style.height = `${size}px`;
+        
+        // Colores tech art (azul o púrpura)
+        const isBlue = Math.random() > 0.5;
+        const color = isBlue ? 'rgba(88, 166, 255, ' : 'rgba(210, 168, 255, ';
+        const alpha = Math.random() * 0.5 + 0.5; // Alta opacidad
+        p.style.background = `${color}${alpha})`;
+        p.style.boxShadow = `0 0 ${size * 2}px ${color}${alpha})`;
+        
+        container.appendChild(p);
+        
+        particles.push({
+            el: p,
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * window.innerHeight,
+            baseX: Math.random() * window.innerWidth,
+            baseY: Math.random() * window.innerHeight,
+            vx: (Math.random() - 0.5) * 0.4, // Drift horizontal
+            vy: (Math.random() - 0.5) * 0.4, // Drift vertical
+            angle: Math.random() * Math.PI * 2,
+            angleSpeed: (Math.random() - 0.5) * 0.02,
+            orbitRadius: Math.random() * 40 + 10,
+            sinSpeed: Math.random() * 0.02 + 0.005,
+            time: Math.random() * 100
+        });
+    }
+    
+    function animate() {
+        particles.forEach(p => {
+            // Movimiento base de deriva (drift)
+            p.baseX += p.vx;
+            p.baseY += p.vy - 0.3; // Flotan ligeramente hacia arriba
+            
+            // Loop en la pantalla
+            if (p.baseY < -50) p.baseY = window.innerHeight + 50;
+            if (p.baseX < -50) p.baseX = window.innerWidth + 50;
+            if (p.baseX > window.innerWidth + 50) p.baseX = -50;
+            
+            // Movimiento sinusoidal y órbita (físico)
+            p.time += p.sinSpeed;
+            p.angle += p.angleSpeed;
+            
+            // Combinación de órbita circular y onda sinusoidal
+            const offsetX = Math.cos(p.angle) * p.orbitRadius + Math.sin(p.time) * 20;
+            const offsetY = Math.sin(p.angle) * p.orbitRadius + Math.cos(p.time) * 20;
+            
+            p.x = p.baseX + offsetX;
+            p.y = p.baseY + offsetY;
+            
+            p.el.style.transform = `translate(${p.x}px, ${p.y}px)`;
+        });
+        
+        requestAnimationFrame(animate);
+    }
+    
+    animate();
+});
