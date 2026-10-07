@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen-Space Frost Effect | Gonzalo Andurell</title>
+    <link rel="icon" type="image/png" href="assets/images/GA.%20Icon.png">
+    <meta name="description" content="FullScreen frost shader for URP that overlays a Substance Designer texture, deforms screen normals for light refraction, and includes a one-click RenderFeature installer.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="grid-overlay"></div>
+        <div class="particles"></div>
+    </div>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">GA<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tech-art.html" class="active">Tech Art</a></li>
+                <li><a href="ai-systems.html">AI & Programming</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="my-games.html">My Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content project-detail-page">
+        <div class="breadcrumb">
+            <a href="tech-art.html" class="back-link">← Back to Tech Art</a>
+        </div>
+
+        <section class="project-hero">
+            <h1 class="hero-title" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;"><span class="c-tech">Screen-Space</span> Frost Effect</h1>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag">URP</span>
+                <span class="tag">Post-Processing</span>
+                <span class="tag">Refraction</span>
+            </div>
+            
+            <div class="hero-video-container" style="border-color: rgba(236, 72, 153, 0.2); box-shadow: 0 10px 40px rgba(236, 72, 153, 0.1); position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px;">
+                <iframe src="https://www.youtube.com/embed/ittHzRU9nPU?autoplay=1&mute=1&loop=1&playlist=ittHzRU9nPU&controls=0&showinfo=0&rel=0&modestbranding=1" title="Screen-Space Frost Effect" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;"></iframe>
+            </div>
+        </section>
+
+        <section class="project-body">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>A FullScreen post-processing shader for URP that simulates a frozen camera lens. It applies a custom frost texture authored in <strong>Substance Designer</strong> as a stylized vignette, while deforming screen normals so that underlying light is refracted through the ice layer.</p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Technical Implementation</h3>
+                <ul class="challenge-list">
+                    <li><strong>Normal Refraction:</strong> Instead of just overlaying a texture, the shader utilizes normal mapping to deform and refract the underlying screen texture, creating a convincing icy distortion.</li>
+                    <li><strong>Editor Tooling:</strong> Developed a custom Editor Window (<code>Tools -> Install / Uninstall FrostFX</code>) that automatically detects the active URP RenderData and injects or removes the ScriptableRenderFeature, preventing users from having to navigate complex rendering assets.</li>
+                    <li><strong>Customization:</strong> Fully exposed properties for snow coloration, frost intensity, and distortion scale.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
