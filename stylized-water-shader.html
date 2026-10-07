@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylized Water Shader Pack | Gonzalo Andurell</title>
+    <link rel="icon" type="image/png" href="assets/images/GA.%20Icon.png">
+    <meta name="description" content="Unlit toon water shader for URP. Uses Z-Buffer depth for intersection foam, vertex displacement for waves, and opaque rendering for high performance.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="grid-overlay"></div>
+        <div class="particles"></div>
+    </div>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">GA<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tech-art.html" class="active">Tech Art</a></li>
+                <li><a href="ai-systems.html">AI & Programming</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="my-games.html">My Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content project-detail-page">
+        <div class="breadcrumb">
+            <a href="tech-art.html" class="back-link">← Back to Tech Art</a>
+        </div>
+
+        <section class="project-hero">
+            <h1 class="hero-title" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;"><span class="c-tech">Stylized Water</span> Shader Pack</h1>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag">URP</span>
+                <span class="tag">Shader Graph</span>
+                <span class="tag">Optimization</span>
+            </div>
+            
+            <div class="hero-video-container" style="border-color: rgba(236, 72, 153, 0.2); box-shadow: 0 10px 40px rgba(236, 72, 153, 0.1); position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px;">
+                <iframe src="https://www.youtube.com/embed/VocME252taI?autoplay=1&mute=1&loop=1&playlist=VocME252taI&controls=0&showinfo=0&rel=0&modestbranding=1" title="Stylized Water Shader Pack" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;"></iframe>
+            </div>
+        </section>
+
+        <section class="project-body">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>An unlit toon shader designed to simulate stylized water without transparency, light interactions, or reflections. All visual cues—foam, depth gradients, surface contact—are derived from the Z-Buffer, keeping the shader fully opaque and performant.</p>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Technical Implementation</h3>
+                <ul class="challenge-list">
+                    <li><strong>Z-Buffer Depth & Foam:</strong> By reading the camera's Depth Buffer, the shader calculates intersection lines against solid geometry to paint stylized shoreline foam and gradients for deeper water segments.</li>
+                    <li><strong>Vertex Displacement:</strong> Implements a wave simulation at the vertex level, physically displacing the water mesh for added dynamism.</li>
+                    <li><strong>Opaque Rendering:</strong> By completely skipping the transparent render queue and relying exclusively on depth intersections, the shader achieves extremely high performance, making it ideal for mobile and stylized games.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

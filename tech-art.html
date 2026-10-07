@@ -23,13 +23,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="background-effects">
+        <div class="grid-overlay"></div>
+        <div class="particles"></div>
+    </div>
     <header>
         <nav>
             <div class="logo"><a href="index.html">GA<span>.</span></a></div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="ai-systems.html">AI & Programming</a></li>
                 <li><a href="tech-art.html" class="active">Tech Art</a></li>
+                <li><a href="ai-systems.html">AI & Programming</a></li>
                 <li><a href="game-design.html">Game Design</a></li>
                 <li><a href="my-games.html">My Games</a></li>
             </ul>
@@ -50,6 +54,91 @@
 
         <section class="projects-section">
             <div class="projects-grid">
+
+                <!-- Pattern Transition Screen FX -->
+                <article class="project-card">
+                    <div class="project-media">
+                        <iframe src="https://www.youtube.com/embed/xa8GHf-A27U?autoplay=1&mute=1&loop=1&playlist=xa8GHf-A27U&controls=0&showinfo=0&rel=0&modestbranding=1" title="Pattern Transition Screen FX" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3><span class="c-tech">Pattern Transition</span> Screen FX</h3>
+                        <div class="tags">
+                            <span class="tag">URP</span>
+                            <span class="tag">Shader Graph</span>
+                            <span class="tag">C# Tooling</span>
+                        </div>
+                        <p>FullScreen effect that transitions between the rendered scene and a flat color using 2D/3D patterns projected via Triplanar Mapping. Decoupled ScriptableObject profiles control Unity curves and custom timings, with a simple Play / Reverse / SetProgress API.</p>
+                        <a href="pattern-transition-fx.html" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">View Details</a>
+                    </div>
+                </article>
+
+                <!-- Stylized Water Shader Pack -->
+                <article class="project-card">
+                    <div class="project-media">
+                        <iframe src="https://www.youtube.com/embed/VocME252taI?autoplay=1&mute=1&loop=1&playlist=VocME252taI&controls=0&showinfo=0&rel=0&modestbranding=1" title="Stylized Water Shader Pack" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3><span class="c-tech">Stylized Water</span> Shader Pack</h3>
+                        <div class="tags">
+                            <span class="tag">URP</span>
+                            <span class="tag">Shader Graph</span>
+                            <span class="tag">Optimization</span>
+                        </div>
+                        <p>Unlit toon water shader that uses Z-Buffer depth to draw intersection foam and depth gradients without transparency. Includes vertex displacement for wave simulation, resulting in a fully opaque, high-performance water surface.</p>
+                        <a href="stylized-water-shader.html" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">View Details</a>
+                    </div>
+                </article>
+
+                <!-- Screen-Space Frost Effect -->
+                <article class="project-card">
+                    <div class="project-media">
+                        <iframe src="https://www.youtube.com/embed/ittHzRU9nPU?autoplay=1&mute=1&loop=1&playlist=ittHzRU9nPU&controls=0&showinfo=0&rel=0&modestbranding=1" title="Screen-Space Frost Effect" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3><span class="c-tech">Screen-Space</span> Frost Effect</h3>
+                        <div class="tags">
+                            <span class="tag">URP</span>
+                            <span class="tag">Post-Processing</span>
+                            <span class="tag">Refraction</span>
+                        </div>
+                        <p>FullScreen shader that overlays a Substance Designer frost texture as a vignette. Deforms screen normals to refract light as if viewed through a frozen lens. Includes a one-click Tools → Install/Uninstall window that auto-injects the RenderFeature.</p>
+                        <a href="screen-space-frost.html" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">View Details</a>
+                    </div>
+                </article>
+
+                <!-- Stylized Interactive Grass Kit -->
+                <article class="project-card">
+                    <div class="project-media">
+                        <iframe src="https://www.youtube.com/embed/S1vpQ9XITQQ?autoplay=1&mute=1&loop=1&playlist=S1vpQ9XITQQ&controls=0&showinfo=0&rel=0&modestbranding=1" title="Interactive Grass Kit" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3><span class="c-tech">Interactive Grass</span> Kit</h3>
+                        <div class="tags">
+                            <span class="tag">URP</span>
+                            <span class="tag">Shader Graph</span>
+                            <span class="tag">Performance</span>
+                        </div>
+                        <p>Grass meshes with a dedicated shader that simulates wind and player interaction on the GPU. Uses a custom Main Light calculation instead of standard lighting to keep a stylized look. Includes Terrain-ready prefabs with customizable colors.</p>
+                        <a href="stylized-grass-kit.html" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">View Details</a>
+                    </div>
+                </article>
+
+                <!-- Stylized Dissolve FX -->
+                <article class="project-card">
+                    <div class="project-media">
+                        <iframe src="https://www.youtube.com/embed/TuEQ5R0joag?autoplay=1&mute=1&loop=1&playlist=TuEQ5R0joag&controls=0&showinfo=0&rel=0&modestbranding=1" title="Stylized Dissolve FX" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3><span class="c-tech">Stylized Dissolve</span> FX</h3>
+                        <div class="tags">
+                            <span class="tag">URP</span>
+                            <span class="tag">Shader Graph</span>
+                            <span class="tag">VFX</span>
+                        </div>
+                        <p>Base material shader with a 0-to-1 dissolve parameter that clips fragments using a noise texture. Borders support custom colors and HDR emissive values, allowing different dissolution looks—fire, acid, magic—by changing edge settings alone.</p>
+                        <a href="stylized-dissolve-fx.html" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">View Details</a>
+                    </div>
+                </article>
 
                 <!-- Minotaur 3D Project -->
                 <article class="project-card">
