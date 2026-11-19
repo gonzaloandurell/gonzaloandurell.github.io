@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Paper Roll | Gonzalo Andurell</title>
+    <link rel="icon" type="image/png" href="assets/images/GA.%20Icon.png">
+    <meta name="description"
+        content="Interactive 3D scrolls and paper rolls shader for Unity URP. Real-time HLSL rolling, organic torn edges, waves, burn effects, custom Material GUI, and C# control.">
+
+    <!-- Open Graph / Social Media Thumbnail -->
+    <meta property="og:title" content="Interactive Paper Roll | Gonzalo Andurell">
+    <meta property="og:description"
+        content="Build interactive 3D scrolls and maps in URP with HLSL rolling, organic torn edges, waves, burn effects, and C# control.">
+    <meta property="og:image" content="https://gonzaloandurell.github.io/assets/images/thumbnail.png">
+    <meta property="og:url" content="https://gonzaloandurell.github.io/interactive-paper-roll.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interactive Paper Roll | Gonzalo Andurell">
+    <meta name="twitter:description"
+        content="Build interactive 3D scrolls and maps in URP with HLSL rolling, organic torn edges, waves, burn effects, and C# control.">
+    <meta name="twitter:image" content="https://gonzaloandurell.github.io/assets/images/thumbnail.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="grid-overlay"></div>
+        <div class="particles"></div>
+    </div>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">GA<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tech-art.html" class="active">Tech Art</a></li>
+                <li><a href="ai-systems.html">AI & Programming</a></li>
+                <li><a href="my-games.html">My Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content project-detail-page">
+        <div class="breadcrumb">
+            <a href="tech-art.html" class="back-link">← Back to Tech Art</a>
+        </div>
+
+        <section class="project-hero">
+            <h1 class="hero-title" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;"><span
+                    class="c-tech">Interactive Paper</span> Roll</h1>
+            <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+                <span class="tag">URP</span>
+                <span class="tag">HLSL</span>
+                <span class="tag">Custom GUI</span>
+                <span class="tag">C# Tooling</span>
+            </div>
+
+            <div class="hero-video-container"
+                style="border-color: rgba(236, 72, 153, 0.2); box-shadow: 0 10px 40px rgba(236, 72, 153, 0.1); position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px;">
+                <iframe
+                    src="https://www.youtube.com/embed/386nhkcntb0?autoplay=1&mute=1&loop=1&playlist=386nhkcntb0&controls=0&showinfo=0&rel=0&modestbranding=1"
+                    title="Interactive Paper Roll" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;"></iframe>
+            </div>
+        </section>
+
+        <section class="project-body">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>A procedural shader system created for Unity's <strong>Universal Render Pipeline (URP)</strong>
+                    designed to construct interactive 3D scrolls, maps, and ancient manuscripts. It delivers real-time
+                    rolling animations, organic edge weathering, dynamic burning, and wave deformation, fully manageable
+                    through high-level C# scripts.</p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">Technical Implementation
+                </h3>
+                <ul class="challenge-list">
+                    <li><strong>HLSL Vertex Deformation (Rolling Simulation):</strong> Uses tailored HLSL math to
+                        calculate non-linear vertex curl and curvature in real time on the GPU. Provides four distinct
+                        roll modes: <em>Top</em>, <em>Bottom</em>, <em>Both (Symmetrical)</em>, and <em>Both
+                            (Independent)</em>, ensuring support for single scrolls or dual-spindle rolled maps.</li>
+                    <li><strong>Organic Edge Erosion & Burn Effects:</strong> Features procedural noise erosion for
+                        authentic torn paper borders, dynamic wave displacement for subtle physical movement, and
+                        customizable dissolve/burn effects with glowing ember outlines. Supports independent front and
+                        back textures to simulate illustrations, writing, or backing parchment.</li>
+                    <li><strong>Custom Material GUI:</strong> Includes an intuitive Unity Editor custom shader inspector
+                        that cleans up clutter, presenting artists with neatly categorized property groups, visual
+                        toggles, and sliders.</li>
+                    <li><strong>C# Paper Controller:</strong> Ships with an out-of-the-box C# Controller script allowing
+                        programmers and technical designers to animate, unroll, curl, and burn the paper at runtime via
+                        scripts, UI events, or Unity Timelines without needing to know shader internals or manipulate
+                        material properties by hand.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gonzalo Andurell. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

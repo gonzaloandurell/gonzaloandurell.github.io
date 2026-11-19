@@ -282,7 +282,7 @@ nav {
 
 .hub-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -326,29 +326,27 @@ nav {
 }
 
 /* Unique Hover Colors for specific cards index styling */
-.hub-card:nth-child(2):hover {
-    border-color: #d2a8ff; /* purple */
+.hub-card:nth-child(1):hover {
+    border-color: #d2a8ff; /* purple - Tech Art */
 }
 
-.hub-card:nth-child(2):hover::before {
+.hub-card:nth-child(1):hover::before {
     background: #d2a8ff;
 }
 
+.hub-card:nth-child(2):hover {
+    border-color: var(--accent-color); /* blue - AI & Programming */
+}
+
+.hub-card:nth-child(2):hover::before {
+    background: var(--accent-color);
+}
+
 .hub-card:nth-child(3):hover {
-    border-color: #3fb950; /* green */
+    border-color: #f0883e; /* orange - My Games */
 }
 
-/* Green */
 .hub-card:nth-child(3):hover::before {
-    background: #3fb950;
-}
-
-.hub-card:nth-child(4):hover {
-    border-color: #f0883e; /* orange */
-}
-
-/* Orange */
-.hub-card:nth-child(4):hover::before {
     background: #f0883e;
 }
 
@@ -435,21 +433,16 @@ nav {
 }
 
 .hub-card:nth-child(1):hover .icon-wrapper {
-    border-color: var(--accent-color);
-    background: rgba(88, 166, 255, 0.1);
-}
-
-.hub-card:nth-child(2):hover .icon-wrapper {
     border-color: #d2a8ff;
     background: rgba(210, 168, 255, 0.1);
 }
 
-.hub-card:nth-child(3):hover .icon-wrapper {
-    border-color: #3fb950;
-    background: rgba(63, 185, 80, 0.1);
+.hub-card:nth-child(2):hover .icon-wrapper {
+    border-color: var(--accent-color);
+    background: rgba(88, 166, 255, 0.1);
 }
 
-.hub-card:nth-child(4):hover .icon-wrapper {
+.hub-card:nth-child(3):hover .icon-wrapper {
     border-color: #f0883e;
     background: rgba(240, 136, 62, 0.1);
 }
